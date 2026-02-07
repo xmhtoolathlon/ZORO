@@ -51,21 +51,37 @@ ZORO/
 
 ### 🐛 Known Issues List
 
-- [ ] **zoro/models/backbone.py:23** - Memory leak when loading large models
-- [ ] **zoro/models/backbone.py:45** - Deprecated torch.cuda.amp usage needs migration
-- [ ] **zoro/models/backbone.py:67** - Gradient checkpointing not working for all layers
-- [ ] **zoro/models/head.py:15** - Output tensor shape mismatch for batch_size > 32
-- [ ] **zoro/models/head.py:38** - Softmax numerical instability for large logits
-- [ ] **zoro/utils/data_loader.py:12** - Memory not released after dataloader iteration
-- [ ] **zoro/utils/data_loader.py:34** - Prefetch queue grows unbounded
-- [ ] **zoro/utils/data_loader.py:56** - Worker processes not properly terminated
-- [ ] **zoro/utils/transforms.py:19** - Image normalization values hardcoded
+- [ ] **tests/test_models.py:8** - Mock fixtures not properly cleaned up
+- [ ] **tests/test_models.py:9** - Should use pytest fixtures with proper teardown
+- [ ] **tests/test_utils.py:10** - Temporary files not deleted after tests
+- [ ] **tests/test_utils.py:11** - Should use pytest tmp_path fixture instead
+- [ ] **zoro/inference/engine.py:21** - CUDA stream synchronization missing
+- [ ] **zoro/inference/engine.py:22** - Need to properly sync streams for accurate timing
+- [ ] **zoro/inference/engine.py:32** - Model warm-up not implemented
+- [ ] **zoro/inference/engine.py:33** - Should run dummy inference to warm up CUDA kernels
+- [ ] **zoro/inference/engine.py:40** - Batch inference timeout not configurable
+- [ ] **zoro/inference/engine.py:41** - Should implement proper timeout handling
+- [ ] **zoro/models/backbone.py:15** - Memory leak when loading large models - need to clear cache after load
+- [ ] **zoro/models/backbone.py:16** - Consider using memory-mapped loading for very large checkpoints
+- [ ] **zoro/models/backbone.py:28** - Deprecated torch.cuda.amp usage needs migration to new API
+- [ ] **zoro/models/backbone.py:29** - The autocast context manager should use torch.amp.autocast
+- [ ] **zoro/models/backbone.py:38** - Gradient checkpointing not working for all layers
+- [ ] **zoro/models/backbone.py:39** - Need to investigate checkpoint_sequential compatibility
+- [ ] **zoro/models/backbone.py:45** - Checkpoint compatibility issues between versions
+- [ ] **zoro/models/head.py:11** - Output tensor shape mismatch for batch_size > 32
+- [ ] **zoro/models/head.py:12** - Need to handle dynamic batch sizes properly
+- [ ] **zoro/models/head.py:29** - Softmax numerical instability for large logits
+- [ ] **zoro/models/head.py:30** - Consider using log_softmax for better numerical stability
+- [ ] **zoro/utils/data_loader.py:7** - Memory not released after dataloader iteration
+- [ ] **zoro/utils/data_loader.py:8** - Need to implement proper cleanup in __del__ method
+- [ ] **zoro/utils/data_loader.py:18** - Prefetch queue grows unbounded
+- [ ] **zoro/utils/data_loader.py:19** - Implement bounded queue with proper backpressure
+- [ ] **zoro/utils/data_loader.py:41** - Worker processes not properly terminated
+- [ ] **zoro/utils/data_loader.py:42** - Need to implement proper cleanup hooks
+- [ ] **zoro/utils/transforms.py:6** - Image normalization values hardcoded
+- [ ] **zoro/utils/transforms.py:7** - Should make these configurable or load from config file
 - [ ] **zoro/utils/transforms.py:41** - Augmentation pipeline not deterministic with seed
-- [ ] **zoro/inference/engine.py:28** - CUDA stream synchronization missing
-- [ ] **zoro/inference/engine.py:52** - Model warm-up not implemented
-- [ ] **zoro/inference/engine.py:78** - Batch inference timeout not configurable
-- [ ] **tests/test_models.py:16** - Mock fixtures not properly cleaned up
-- [ ] **tests/test_utils.py:22** - Temporary files not deleted after tests
+- [ ] **zoro/utils/transforms.py:42** - Random state not properly saved and restored
 
 ## 🤝 Contributing
 
