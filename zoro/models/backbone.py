@@ -1,50 +1,47 @@
-"""
-Backbone Network Implementations
-"""
+"""Neural Network Backbone Models"""
+
 import torch
 import torch.nn as nn
+from typing import Optional, List
 
 class ResNetBackbone(nn.Module):
-    """ResNet backbone for feature extraction."""
+    """ResNet-based backbone for feature extraction."""
     
-    def __init__(self, depth=50, pretrained=True):
+    def __init__(self, depth: int = 50, pretrained: bool = True):
         super().__init__()
-        # TODO: Load pretrained ResNet weights from torchvision
-        # TODO: Add option to freeze batch normalization layers
-        # TODO: Implement feature extraction at multiple scales
         self.depth = depth
+        self.pretrained = pretrained
+        
+        # FIXME: Memory leak when loading large models - need to clear cache after load
+        # FIXME: Consider using memory-mapped loading for very large checkpoints
+        self.layers = self._build_layers()
+        
+    def _build_layers(self) -> nn.ModuleList:
+        """Build the backbone layers."""
+        layers = nn.ModuleList()
+        
+        # Initial convolution
+        layers.append(nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3))
+        layers.append(nn.BatchNorm2d(64))
+        layers.append(nn.ReLU(inplace=True))
+        
+        # FIXME: Deprecated torch.cuda.amp usage needs migration to new API
+        # FIXME: The autocast context manager should use torch.amp.autocast
+        
+        return layers
     
-    def forward(self, x):
-        # TODO: Implement forward pass returning multi-scale features
-        pass
-
-
-class EfficientNetBackbone(nn.Module):
-    """EfficientNet backbone for efficient feature extraction."""
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Forward pass through backbone."""
+        for layer in self.layers:
+            x = layer(x)
+        
+        # FIXME: Gradient checkpointing not working for all layers
+        # FIXME: Need to investigate checkpoint_sequential compatibility
+        
+        return x
     
-    def __init__(self, variant="b0"):
-        super().__init__()
-        # TODO: Initialize EfficientNet with compound scaling
-        # TODO: Add squeeze-and-excitation block support
-        self.variant = variant
-    
-    def forward(self, x):
-        # TODO: Return hierarchical features
-        pass
-
-
-class ViTBackbone(nn.Module):
-    """Vision Transformer backbone."""
-    
-    def __init__(self, patch_size=16, embed_dim=768):
-        super().__init__()
-        # TODO: Implement patch embedding layer
-        # TODO: Add positional encoding
-        # TODO: Support different ViT variants (base, large, huge)
-        self.patch_size = patch_size
-        self.embed_dim = embed_dim
-    
-    def forward(self, x):
-        # TODO: Implement transformer encoder forward pass
-        # TODO: Add attention visualization capability
-        pass
+    def load_pretrained(self, checkpoint_path: str) -> None:
+        """Load pretrained weights."""
+        # FIXME: Checkpoint compatibility issues between versions
+        checkpoint = torch.load(checkpoint_path)
+        self.load_state_dict(checkpoint, strict=False)
