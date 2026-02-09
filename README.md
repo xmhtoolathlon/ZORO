@@ -53,34 +53,45 @@ ZORO/
 - [ ] **zoro/__init__.py:8** - Add lazy imports for heavy modules
 - [ ] **zoro/__init__.py:9** - Set up logging configuration
 - [ ] **zoro/__init__.py:10** - Add version compatibility checks
-- [ ] **zoro/core/detector.py:11** - Add support for custom backbone networks
-- [ ] **zoro/core/detector.py:12** - Implement feature pyramid network integration
-- [ ] **zoro/core/detector.py:13** - Add multi-scale detection capabilities
-- [ ] **zoro/core/detector.py:18** - Implement checkpoint loading with validation
-- [ ] **zoro/core/detector.py:19** - Add support for ONNX model format
-- [ ] **zoro/core/detector.py:20** - Handle corrupted checkpoint files gracefully
-- [ ] **zoro/core/detector.py:24** - Implement batch processing for multiple images
-- [ ] **zoro/core/detector.py:25** - Add non-maximum suppression post-processing
-- [ ] **zoro/core/detector.py:26** - Support different input image formats (BGR, RGB, grayscale)
-- [ ] **zoro/core/detector.py:30** - Add bounding box visualization with confidence scores
-- [ ] **zoro/core/detector.py:31** - Implement class-specific color coding
-- [ ] **zoro/core/detector.py:40** - Support multiple YOLO versions (v5, v7, v8, v9)
-- [ ] **zoro/core/detector.py:41** - Add TensorRT optimization support
-- [ ] **zoro/core/detector.py:45** - Implement model export to different formats
-- [ ] **zoro/core/detector.py:46** - Add quantization support for edge deployment
-- [ ] **zoro/core/segmentation.py:10** - Implement model initialization with pretrained weights
-- [ ] **zoro/core/segmentation.py:11** - Add support for custom number of classes
-- [ ] **zoro/core/segmentation.py:16** - Implement forward pass with proper preprocessing
-- [ ] **zoro/core/segmentation.py:17** - Add support for sliding window inference for large images
-- [ ] **zoro/core/segmentation.py:18** - Implement test-time augmentation
-- [ ] **zoro/core/segmentation.py:22** - Extract binary mask for specific class
-- [ ] **zoro/core/segmentation.py:30** - Initialize Mask R-CNN or similar architecture
-- [ ] **zoro/core/segmentation.py:31** - Add support for panoptic segmentation
-- [ ] **zoro/core/segmentation.py:35** - Implement instance prediction pipeline
-- [ ] **zoro/core/segmentation.py:36** - Add confidence thresholding
-- [ ] **zoro/core/segmentation.py:37** - Support batch inference
-- [ ] **zoro/core/segmentation.py:41** - Implement mask refinement using CRF
-- [ ] **zoro/core/segmentation.py:42** - Add boundary smoothing
+- [ ] **zoro/core/detector.py:16** - Add support for custom backbone networks
+- [ ] **zoro/core/detector.py:35** - Add support for ONNX model format
+- [ ] **zoro/core/detector.py:36** - Handle corrupted checkpoint files gracefully
+- [ ] **zoro/core/detector.py:37** - Add progress bar for large model loading
+- [ ] **zoro/core/detector.py:44** - Add non-maximum suppression post-processing
+- [ ] **zoro/core/detector.py:45** - Support different input image formats (BGR, RGB, grayscale)
+- [ ] **zoro/core/detector.py:46** - Implement confidence score calibration
+- [ ] **zoro/core/detector.py:54** - Add bounding box visualization with confidence scores
+- [ ] **zoro/core/detector.py:55** - Implement class-specific color coding
+- [ ] **zoro/core/detector.py:56** - Add support for video frame visualization
+- [ ] **zoro/core/detector.py:65** - Support multiple YOLO versions (v5, v7, v8, v9)
+- [ ] **zoro/core/detector.py:66** - Add TensorRT optimization support
+- [ ] **zoro/core/detector.py:70** - Implement model export to different formats
+- [ ] **zoro/core/detector.py:71** - Add quantization support for edge deployment
+- [ ] **zoro/core/detector.py:72** - Support CoreML export for iOS deployment
+- [ ] **zoro/core/detector.py:81** - Initialize RPN (Region Proposal Network)
+- [ ] **zoro/core/detector.py:82** - Set up ROI pooling layer
+- [ ] **zoro/core/detector.py:86** - Implement region proposal generation
+- [ ] **zoro/core/detector.py:87** - Add NMS for proposal filtering
+- [ ] **zoro/core/segmentation.py:21** - Add support for DeepLabV3+ architecture
+- [ ] **zoro/core/segmentation.py:22** - Implement attention-based segmentation heads
+- [ ] **zoro/core/segmentation.py:40** - Add support for sliding window inference for large images
+- [ ] **zoro/core/segmentation.py:41** - Implement test-time augmentation
+- [ ] **zoro/core/segmentation.py:42** - Add multi-scale inference fusion
+- [ ] **zoro/core/segmentation.py:46** - Extract binary mask for specific class
+- [ ] **zoro/core/segmentation.py:47** - Add morphological operations for mask refinement
+- [ ] **zoro/core/segmentation.py:55** - Initialize Mask R-CNN or similar architecture
+- [ ] **zoro/core/segmentation.py:56** - Add support for panoptic segmentation
+- [ ] **zoro/core/segmentation.py:57** - Implement SOLO/SOLOv2 architecture option
+- [ ] **zoro/core/segmentation.py:61** - Implement instance prediction pipeline
+- [ ] **zoro/core/segmentation.py:62** - Add confidence thresholding
+- [ ] **zoro/core/segmentation.py:63** - Support batch inference
+- [ ] **zoro/core/segmentation.py:67** - Implement mask refinement using CRF
+- [ ] **zoro/core/segmentation.py:68** - Add boundary smoothing
+- [ ] **zoro/core/segmentation.py:76** - Initialize semantic branch
+- [ ] **zoro/core/segmentation.py:77** - Initialize instance branch
+- [ ] **zoro/core/segmentation.py:78** - Set up panoptic fusion module
+- [ ] **zoro/core/segmentation.py:82** - Implement panoptic segmentation pipeline
+- [ ] **zoro/core/segmentation.py:83** - Handle stuff vs things classes
 - [ ] **zoro/evaluation/metrics.py:8** - Handle edge cases (zero area boxes)
 - [ ] **zoro/evaluation/metrics.py:9** - Support rotated bounding boxes
 - [ ] **zoro/evaluation/metrics.py:14** - Implement AP calculation per class
@@ -143,7 +154,6 @@ ZORO/
 - [ ] **zoro/utils/preprocessing.py:41** - Implement caching mechanism for frequently accessed images
 - [ ] **zoro/utils/preprocessing.py:46** - Implement iterator with proper batching
 - [ ] **zoro/utils/preprocessing.py:50** - Return dataset length
-
 ## 🤝 Contributing
 
 1. Pick a TODO item from the list above
