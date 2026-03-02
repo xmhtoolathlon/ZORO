@@ -55,108 +55,108 @@ ZORO/
 
 ### 🔧 Complete FIXME List
 
-- [ ] **zoro/core/optimizer.py:12** - Add support for learning rate scheduling
-- [ ] **zoro/core/optimizer.py:13** - Implement warm-up period for training stability
-- [ ] **zoro/core/optimizer.py:14** - Add gradient clipping functionality
-- [ ] **zoro/core/optimizer.py:17** - Implement momentum-based updates
-- [ ] **zoro/core/optimizer.py:18** - Add support for sparse gradients
-- [ ] **zoro/core/optimizer.py:22** - Optimize memory cleanup for large models
+- [ ] **zoro/core/optimizer.py:11** - Add support for learning rate scheduling
+- [ ] **zoro/core/optimizer.py:12** - Implement warm-up period for training stability
+- [ ] **zoro/core/optimizer.py:13** - Add gradient clipping functionality
+- [ ] **zoro/core/optimizer.py:16** - Implement momentum-based updates
+- [ ] **zoro/core/optimizer.py:17** - Add support for sparse gradients
+- [ ] **zoro/core/optimizer.py:21** - Optimize memory cleanup for large models
 - [ ] **zoro/core/optimizer.py:29** - Validate parameter types and shapes
 - [ ] **zoro/core/optimizer.py:30** - Add automatic dtype conversion
 - [ ] **zoro/core/optimizer.py:35** - Handle NaN gradients gracefully
 - [ ] **zoro/core/optimizer.py:36** - Add gradient scaling for mixed precision
-- [ ] **zoro/core/scheduler.py:10** - Add support for warm restarts
-- [ ] **zoro/core/scheduler.py:11** - Implement cycle multiplier for longer training
-- [ ] **zoro/core/scheduler.py:17** - Handle edge case when epoch > T_max
-- [ ] **zoro/core/scheduler.py:18** - Add logging for learning rate changes
+- [ ] **zoro/core/scheduler.py:9** - Add support for warm restarts
+- [ ] **zoro/core/scheduler.py:10** - Implement cycle multiplier for longer training
+- [ ] **zoro/core/scheduler.py:16** - Handle edge case when epoch > T_max
+- [ ] **zoro/core/scheduler.py:17** - Add logging for learning rate changes
 - [ ] **zoro/core/scheduler.py:25** - Validate warmup_steps is positive
 - [ ] **zoro/core/scheduler.py:30** - Implement smooth transition at end of warmup
-- [ ] **zoro/models/transformer.py:14** - Add support for relative positional encoding
-- [ ] **zoro/models/transformer.py:15** - Implement flash attention for memory efficiency
-- [ ] **zoro/models/transformer.py:16** - Add model parallelism support for large models
-- [ ] **zoro/models/transformer.py:20** - Handle variable sequence lengths efficiently
-- [ ] **zoro/models/transformer.py:21** - Add caching for inference mode
-- [ ] **zoro/models/transformer.py:22** - Implement gradient checkpointing option
-- [ ] **zoro/models/transformer.py:26** - Implement beam search decoding
-- [ ] **zoro/models/transformer.py:27** - Add temperature and top-k sampling
-- [ ] **zoro/models/transformer.py:28** - Support batched generation
-- [ ] **zoro/models/transformer.py:35** - Add support for ALiBi positional bias
-- [ ] **zoro/models/transformer.py:36** - Implement grouped query attention
-- [ ] **zoro/models/transformer.py:40** - Add KV cache for autoregressive generation
-- [ ] **zoro/models/transformer.py:41** - Optimize memory layout for better performance
-- [ ] **zoro/models/encoder.py:12** - Add layer normalization options
-- [ ] **zoro/models/encoder.py:13** - Support residual connections
-- [ ] **zoro/models/encoder.py:21** - Add dropout for regularization
-- [ ] **zoro/models/encoder.py:22** - Implement attention pooling option
+- [ ] **zoro/data/loader.py:11** - Add lazy loading for large datasets
+- [ ] **zoro/data/loader.py:12** - Implement memory mapping for efficiency
+- [ ] **zoro/data/loader.py:13** - Add data validation on load
+- [ ] **zoro/data/loader.py:18** - Add caching mechanism
+- [ ] **zoro/data/loader.py:19** - Handle corrupted data gracefully
+- [ ] **zoro/data/loader.py:23** - Implement efficient length calculation
+- [ ] **zoro/data/loader.py:28** - Add automatic batch size scaling
+- [ ] **zoro/data/loader.py:29** - Implement distributed sampling
+- [ ] **zoro/data/loader.py:30** - Add prefetching optimization
+- [ ] **zoro/data/preprocessing.py:10** - Add support for multiple tokenizers
+- [ ] **zoro/data/preprocessing.py:11** - Implement dynamic padding
+- [ ] **zoro/data/preprocessing.py:16** - Add text cleaning and normalization
+- [ ] **zoro/data/preprocessing.py:17** - Handle special characters properly
+- [ ] **zoro/data/preprocessing.py:18** - Implement truncation strategies
+- [ ] **zoro/data/preprocessing.py:26** - Add aspect ratio preservation option
+- [ ] **zoro/data/preprocessing.py:27** - Implement center crop vs resize options
+- [ ] **zoro/data/preprocessing.py:31** - Support different normalization schemes
+- [ ] **zoro/data/preprocessing.py:32** - Add per-channel normalization
+- [ ] **zoro/models/encoder.py:11** - Add layer normalization options
+- [ ] **zoro/models/encoder.py:12** - Support residual connections
+- [ ] **zoro/models/encoder.py:20** - Add dropout for regularization
+- [ ] **zoro/models/encoder.py:21** - Implement attention pooling option
 - [ ] **zoro/models/encoder.py:30** - Support multiple backbone architectures
 - [ ] **zoro/models/encoder.py:31** - Add pretrained weight loading
 - [ ] **zoro/models/encoder.py:32** - Implement feature pyramid network option
 - [ ] **zoro/models/encoder.py:36** - Handle different image sizes
 - [ ] **zoro/models/encoder.py:37** - Add data augmentation pipeline
-- [ ] **zoro/data/loader.py:12** - Add lazy loading for large datasets
-- [ ] **zoro/data/loader.py:13** - Implement memory mapping for efficiency
-- [ ] **zoro/data/loader.py:14** - Add data validation on load
-- [ ] **zoro/data/loader.py:19** - Add caching mechanism
-- [ ] **zoro/data/loader.py:20** - Handle corrupted data gracefully
-- [ ] **zoro/data/loader.py:24** - Implement efficient length calculation
-- [ ] **zoro/data/loader.py:28** - Add automatic batch size scaling
-- [ ] **zoro/data/loader.py:29** - Implement distributed sampling
-- [ ] **zoro/data/loader.py:30** - Add prefetching optimization
-- [ ] **zoro/data/preprocessing.py:11** - Add support for multiple tokenizers
-- [ ] **zoro/data/preprocessing.py:12** - Implement dynamic padding
-- [ ] **zoro/data/preprocessing.py:17** - Add text cleaning and normalization
-- [ ] **zoro/data/preprocessing.py:18** - Handle special characters properly
-- [ ] **zoro/data/preprocessing.py:19** - Implement truncation strategies
-- [ ] **zoro/data/preprocessing.py:26** - Add aspect ratio preservation option
-- [ ] **zoro/data/preprocessing.py:27** - Implement center crop vs resize options
-- [ ] **zoro/data/preprocessing.py:31** - Support different normalization schemes
-- [ ] **zoro/data/preprocessing.py:32** - Add per-channel normalization
+- [ ] **zoro/models/transformer.py:12** - Add support for relative positional encoding
+- [ ] **zoro/models/transformer.py:13** - Implement flash attention for memory efficiency
+- [ ] **zoro/models/transformer.py:14** - Add model parallelism support for large models
+- [ ] **zoro/models/transformer.py:18** - Handle variable sequence lengths efficiently
+- [ ] **zoro/models/transformer.py:19** - Add caching for inference mode
+- [ ] **zoro/models/transformer.py:20** - Implement gradient checkpointing option
+- [ ] **zoro/models/transformer.py:24** - Implement beam search decoding
+- [ ] **zoro/models/transformer.py:25** - Add temperature and top-k sampling
+- [ ] **zoro/models/transformer.py:26** - Support batched generation
+- [ ] **zoro/models/transformer.py:35** - Add support for ALiBi positional bias
+- [ ] **zoro/models/transformer.py:36** - Implement grouped query attention
+- [ ] **zoro/models/transformer.py:40** - Add KV cache for autoregressive generation
+- [ ] **zoro/models/transformer.py:41** - Optimize memory layout for better performance
+- [ ] **zoro/training/losses.py:13** - Add hard negative mining
+- [ ] **zoro/training/losses.py:14** - Implement label smoothing
+- [ ] **zoro/training/losses.py:18** - Handle batch size = 1 edge case
+- [ ] **zoro/training/losses.py:19** - Add support for asymmetric loss
+- [ ] **zoro/training/losses.py:20** - Implement memory bank for negatives
+- [ ] **zoro/training/losses.py:29** - Add semi-hard negative mining
+- [ ] **zoro/training/losses.py:30** - Support online triplet selection
+- [ ] **zoro/training/losses.py:34** - Add distance function options
+- [ ] **zoro/training/losses.py:35** - Implement soft margin variant
+- [ ] **zoro/training/losses.py:40** - Handle class imbalance automatically
+- [ ] **zoro/training/losses.py:41** - Add label smoothing option
+- [ ] **zoro/training/losses.py:42** - Support ignore index
+- [ ] **zoro/training/trainer.py:11** - Add mixed precision training support
+- [ ] **zoro/training/trainer.py:12** - Implement gradient accumulation
+- [ ] **zoro/training/trainer.py:13** - Add distributed training hooks
+- [ ] **zoro/training/trainer.py:20** - Add early stopping mechanism
+- [ ] **zoro/training/trainer.py:21** - Implement curriculum learning
+- [ ] **zoro/training/trainer.py:22** - Add logging callbacks
+- [ ] **zoro/training/trainer.py:25** - Handle batch size mismatches
+- [ ] **zoro/training/trainer.py:29** - Add evaluation metrics selection
+- [ ] **zoro/training/trainer.py:30** - Implement inference optimization
+- [ ] **zoro/training/trainer.py:31** - Support streaming evaluation
+- [ ] **zoro/training/trainer.py:41** - Initialize process groups properly
+- [ ] **zoro/training/trainer.py:42** - Add communication backend selection
+- [ ] **zoro/training/trainer.py:46** - Implement efficient all-reduce
+- [ ] **zoro/training/trainer.py:47** - Add gradient compression
+- [ ] **zoro/utils/checkpoint.py:11** - Add cloud storage support (S3, GCS)
+- [ ] **zoro/utils/checkpoint.py:12** - Implement checkpoint compression
+- [ ] **zoro/utils/checkpoint.py:17** - Add atomic save for crash safety
+- [ ] **zoro/utils/checkpoint.py:18** - Save training state for exact resume
+- [ ] **zoro/utils/checkpoint.py:19** - Implement best model tracking
+- [ ] **zoro/utils/checkpoint.py:23** - Handle missing keys gracefully
+- [ ] **zoro/utils/checkpoint.py:24** - Add version compatibility checks
+- [ ] **zoro/utils/checkpoint.py:25** - Support loading from URLs
+- [ ] **zoro/utils/checkpoint.py:29** - Implement async cleanup
+- [ ] **zoro/utils/checkpoint.py:30** - Add disk space monitoring
 - [ ] **zoro/utils/metrics.py:7** - Add support for multi-label classification
 - [ ] **zoro/utils/metrics.py:8** - Implement weighted accuracy
 - [ ] **zoro/utils/metrics.py:13** - Add micro/macro averaging options
 - [ ] **zoro/utils/metrics.py:14** - Handle edge case of no positive predictions
 - [ ] **zoro/utils/metrics.py:15** - Support multi-class scenarios
-- [ ] **zoro/utils/metrics.py:22** - Add support for custom metrics
-- [ ] **zoro/utils/metrics.py:23** - Implement metric history storage
-- [ ] **zoro/utils/metrics.py:27** - Add running average computation
-- [ ] **zoro/utils/metrics.py:28** - Implement metric smoothing
-- [ ] **zoro/utils/metrics.py:34** - Handle empty metric lists
-- [ ] **zoro/utils/checkpoint.py:12** - Add cloud storage support (S3, GCS)
-- [ ] **zoro/utils/checkpoint.py:13** - Implement checkpoint compression
-- [ ] **zoro/utils/checkpoint.py:18** - Add atomic save for crash safety
-- [ ] **zoro/utils/checkpoint.py:19** - Save training state for exact resume
-- [ ] **zoro/utils/checkpoint.py:20** - Implement best model tracking
-- [ ] **zoro/utils/checkpoint.py:24** - Handle missing keys gracefully
-- [ ] **zoro/utils/checkpoint.py:25** - Add version compatibility checks
-- [ ] **zoro/utils/checkpoint.py:26** - Support loading from URLs
-- [ ] **zoro/utils/checkpoint.py:30** - Implement async cleanup
-- [ ] **zoro/utils/checkpoint.py:31** - Add disk space monitoring
-- [ ] **zoro/training/trainer.py:12** - Add mixed precision training support
-- [ ] **zoro/training/trainer.py:13** - Implement gradient accumulation
-- [ ] **zoro/training/trainer.py:14** - Add distributed training hooks
-- [ ] **zoro/training/trainer.py:21** - Add early stopping mechanism
-- [ ] **zoro/training/trainer.py:22** - Implement curriculum learning
-- [ ] **zoro/training/trainer.py:23** - Add logging callbacks
-- [ ] **zoro/training/trainer.py:26** - Handle batch size mismatches
-- [ ] **zoro/training/trainer.py:30** - Add evaluation metrics selection
-- [ ] **zoro/training/trainer.py:31** - Implement inference optimization
-- [ ] **zoro/training/trainer.py:32** - Support streaming evaluation
-- [ ] **zoro/training/trainer.py:41** - Initialize process groups properly
-- [ ] **zoro/training/trainer.py:42** - Add communication backend selection
-- [ ] **zoro/training/trainer.py:46** - Implement efficient all-reduce
-- [ ] **zoro/training/trainer.py:47** - Add gradient compression
-- [ ] **zoro/training/losses.py:12** - Add hard negative mining
-- [ ] **zoro/training/losses.py:13** - Implement label smoothing
-- [ ] **zoro/training/losses.py:17** - Handle batch size = 1 edge case
-- [ ] **zoro/training/losses.py:18** - Add support for asymmetric loss
-- [ ] **zoro/training/losses.py:19** - Implement memory bank for negatives
-- [ ] **zoro/training/losses.py:27** - Add semi-hard negative mining
-- [ ] **zoro/training/losses.py:28** - Support online triplet selection
-- [ ] **zoro/training/losses.py:32** - Add distance function options
-- [ ] **zoro/training/losses.py:33** - Implement soft margin variant
-- [ ] **zoro/training/losses.py:38** - Handle class imbalance automatically
-- [ ] **zoro/training/losses.py:39** - Add label smoothing option
-- [ ] **zoro/training/losses.py:40** - Support ignore index
+- [ ] **zoro/utils/metrics.py:23** - Add support for custom metrics
+- [ ] **zoro/utils/metrics.py:24** - Implement metric history storage
+- [ ] **zoro/utils/metrics.py:28** - Add running average computation
+- [ ] **zoro/utils/metrics.py:29** - Implement metric smoothing
+- [ ] **zoro/utils/metrics.py:35** - Handle empty metric lists
 
 ## 🤝 Contributing
 
