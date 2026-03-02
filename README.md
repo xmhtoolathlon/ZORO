@@ -1,16 +1,18 @@
-# ZORO - Zero-shot Object Recognition Operations
+# ZORO Development Repository
 
-> 🔬 **Development Branch** - A Computer Vision Framework for Object Detection and Segmentation
+> 🚧 **Development Branch** - This is the main development repository for ZORO (Zero-Shot Optimization for Robust Operations)
 
 ## About ZORO
 
-ZORO is a comprehensive computer vision framework designed for object detection, semantic segmentation, and instance segmentation tasks. It provides a unified API for training and deploying various CV models.
+ZORO is a machine learning framework designed for zero-shot learning tasks. It provides optimized training loops, efficient data loading, and state-of-the-art model architectures.
 
 ## 🔧 Development Status
 
-This repository is under active development. Many features are being implemented.
+This repository is under active development. Many features require implementation or bug fixes.
 
 ## 🚀 Quick Start
+
+⚠️ **Note**: This development version has incomplete implementations. Many features are marked as FIXME and need attention.
 
 ```bash
 # Clone the repository
@@ -20,7 +22,7 @@ cd ZORO
 # Install dependencies
 pip install -r requirements.txt
 
-# Note: Check TODO list for incomplete features
+# Note: Check FIXME list below for known issues
 ```
 
 ## 📁 Repository Structure
@@ -28,135 +30,137 @@ pip install -r requirements.txt
 ```
 ZORO/
 ├── zoro/
-│   ├── core/              # Detection and segmentation modules
-│   ├── models/            # Backbone networks
-│   ├── training/          # Training utilities
-│   ├── evaluation/        # Metrics and evaluation
-│   └── utils/             # Preprocessing utilities
-└── README.md
+│   ├── core/              # Core optimization modules
+│   ├── models/            # Model architectures
+│   ├── data/              # Data loading utilities
+│   ├── utils/             # Helper utilities
+│   └── training/          # Training loop implementations
+└── README.md              # This file
 ```
 
 ## ⚠️ Development Notes
 
-- Several core features are marked as TODO
-- Model export functionality needs completion
-- Distributed training support is in progress
+- This is a **development version** with known issues
+- Functions marked with FIXME require attention
+- Some implementations are placeholders
+- Distributed training features need completion
 
-### 🔴 High Priority TODOs
 
-- **Detection**: Multi-scale detection and NMS implementation
-- **Segmentation**: Instance segmentation pipeline
-- **Training**: Distributed training setup
+### 🔴 High Priority FIXMEs
 
-### 📝 Complete TODO List
+- **Optimizer**: Learning rate scheduling and gradient handling
+- **Transformer**: Attention optimizations and generation features  
+- **Data Loading**: Lazy loading and memory efficiency
+- **Training**: Distributed training and mixed precision support
 
-- [ ] **zoro/__init__.py:8** - Add lazy imports for heavy modules
-- [ ] **zoro/__init__.py:9** - Set up logging configuration
-- [ ] **zoro/__init__.py:10** - Add version compatibility checks
-- [ ] **zoro/core/detector.py:16** - Add support for custom backbone networks
-- [ ] **zoro/core/detector.py:35** - Add support for ONNX model format
-- [ ] **zoro/core/detector.py:36** - Handle corrupted checkpoint files gracefully
-- [ ] **zoro/core/detector.py:37** - Add progress bar for large model loading
-- [ ] **zoro/core/detector.py:44** - Add non-maximum suppression post-processing
-- [ ] **zoro/core/detector.py:45** - Support different input image formats (BGR, RGB, grayscale)
-- [ ] **zoro/core/detector.py:46** - Implement confidence score calibration
-- [ ] **zoro/core/detector.py:54** - Add bounding box visualization with confidence scores
-- [ ] **zoro/core/detector.py:55** - Implement class-specific color coding
-- [ ] **zoro/core/detector.py:56** - Add support for video frame visualization
-- [ ] **zoro/core/detector.py:65** - Support multiple YOLO versions (v5, v7, v8, v9)
-- [ ] **zoro/core/detector.py:66** - Add TensorRT optimization support
-- [ ] **zoro/core/detector.py:70** - Implement model export to different formats
-- [ ] **zoro/core/detector.py:71** - Add quantization support for edge deployment
-- [ ] **zoro/core/detector.py:72** - Support CoreML export for iOS deployment
-- [ ] **zoro/core/detector.py:81** - Initialize RPN (Region Proposal Network)
-- [ ] **zoro/core/detector.py:82** - Set up ROI pooling layer
-- [ ] **zoro/core/detector.py:86** - Implement region proposal generation
-- [ ] **zoro/core/detector.py:87** - Add NMS for proposal filtering
-- [ ] **zoro/core/segmentation.py:21** - Add support for DeepLabV3+ architecture
-- [ ] **zoro/core/segmentation.py:22** - Implement attention-based segmentation heads
-- [ ] **zoro/core/segmentation.py:40** - Add support for sliding window inference for large images
-- [ ] **zoro/core/segmentation.py:41** - Implement test-time augmentation
-- [ ] **zoro/core/segmentation.py:42** - Add multi-scale inference fusion
-- [ ] **zoro/core/segmentation.py:46** - Extract binary mask for specific class
-- [ ] **zoro/core/segmentation.py:47** - Add morphological operations for mask refinement
-- [ ] **zoro/core/segmentation.py:55** - Initialize Mask R-CNN or similar architecture
-- [ ] **zoro/core/segmentation.py:56** - Add support for panoptic segmentation
-- [ ] **zoro/core/segmentation.py:57** - Implement SOLO/SOLOv2 architecture option
-- [ ] **zoro/core/segmentation.py:61** - Implement instance prediction pipeline
-- [ ] **zoro/core/segmentation.py:62** - Add confidence thresholding
-- [ ] **zoro/core/segmentation.py:63** - Support batch inference
-- [ ] **zoro/core/segmentation.py:67** - Implement mask refinement using CRF
-- [ ] **zoro/core/segmentation.py:68** - Add boundary smoothing
-- [ ] **zoro/core/segmentation.py:76** - Initialize semantic branch
-- [ ] **zoro/core/segmentation.py:77** - Initialize instance branch
-- [ ] **zoro/core/segmentation.py:78** - Set up panoptic fusion module
-- [ ] **zoro/core/segmentation.py:82** - Implement panoptic segmentation pipeline
-- [ ] **zoro/core/segmentation.py:83** - Handle stuff vs things classes
-- [ ] **zoro/evaluation/metrics.py:8** - Handle edge cases (zero area boxes)
-- [ ] **zoro/evaluation/metrics.py:9** - Support rotated bounding boxes
-- [ ] **zoro/evaluation/metrics.py:14** - Implement AP calculation per class
-- [ ] **zoro/evaluation/metrics.py:15** - Support multiple IoU thresholds (COCO style)
-- [ ] **zoro/evaluation/metrics.py:16** - Add visualization of precision-recall curves
-- [ ] **zoro/evaluation/metrics.py:21** - Handle multi-class segmentation
-- [ ] **zoro/evaluation/metrics.py:22** - Add boundary-aware Dice variant
-- [ ] **zoro/evaluation/metrics.py:27** - Implement class-weighted accuracy
-- [ ] **zoro/evaluation/metrics.py:34** - Initialize metric storage
-- [ ] **zoro/evaluation/metrics.py:35** - Add support for custom metrics
-- [ ] **zoro/evaluation/metrics.py:39** - Implement running average calculation
-- [ ] **zoro/evaluation/metrics.py:43** - Return aggregated metrics
-- [ ] **zoro/evaluation/metrics.py:44** - Add confidence intervals
-- [ ] **zoro/evaluation/metrics.py:48** - Export metrics to JSON/CSV
-- [ ] **zoro/evaluation/metrics.py:49** - Generate visual report with plots
-- [ ] **zoro/models/backbone.py:12** - Load pretrained ResNet weights from torchvision
-- [ ] **zoro/models/backbone.py:13** - Add option to freeze batch normalization layers
-- [ ] **zoro/models/backbone.py:14** - Implement feature extraction at multiple scales
-- [ ] **zoro/models/backbone.py:18** - Implement forward pass returning multi-scale features
-- [ ] **zoro/models/backbone.py:27** - Initialize EfficientNet with compound scaling
-- [ ] **zoro/models/backbone.py:28** - Add squeeze-and-excitation block support
-- [ ] **zoro/models/backbone.py:32** - Return hierarchical features
-- [ ] **zoro/models/backbone.py:41** - Implement patch embedding layer
-- [ ] **zoro/models/backbone.py:42** - Add positional encoding
-- [ ] **zoro/models/backbone.py:43** - Support different ViT variants (base, large, huge)
-- [ ] **zoro/models/backbone.py:48** - Implement transformer encoder forward pass
-- [ ] **zoro/models/backbone.py:49** - Add attention visualization capability
-- [ ] **zoro/training/trainer.py:11** - Initialize optimizer based on config
-- [ ] **zoro/training/trainer.py:12** - Set up learning rate scheduler
-- [ ] **zoro/training/trainer.py:13** - Add support for mixed precision training
-- [ ] **zoro/training/trainer.py:14** - Implement gradient accumulation
-- [ ] **zoro/training/trainer.py:19** - Implement training loop with progress bar
-- [ ] **zoro/training/trainer.py:20** - Add gradient clipping
-- [ ] **zoro/training/trainer.py:21** - Log training metrics to tensorboard
-- [ ] **zoro/training/trainer.py:25** - Implement validation loop
-- [ ] **zoro/training/trainer.py:26** - Compute and return validation metrics
-- [ ] **zoro/training/trainer.py:30** - Save model state dict
-- [ ] **zoro/training/trainer.py:31** - Include optimizer state for resuming
-- [ ] **zoro/training/trainer.py:32** - Add metadata (epoch, best_metric)
-- [ ] **zoro/training/trainer.py:36** - Load checkpoint with validation
-- [ ] **zoro/training/trainer.py:37** - Handle missing keys gracefully
-- [ ] **zoro/training/trainer.py:46** - Initialize process group for DDP
-- [ ] **zoro/training/trainer.py:47** - Wrap model with DistributedDataParallel
-- [ ] **zoro/training/trainer.py:48** - Set up distributed sampler
-- [ ] **zoro/training/trainer.py:52** - Implement gradient synchronization across GPUs
-- [ ] **zoro/utils/preprocessing.py:9** - Implement aspect ratio preserving resize
-- [ ] **zoro/utils/preprocessing.py:10** - Add padding options (center, corner)
-- [ ] **zoro/utils/preprocessing.py:11** - Support different interpolation methods
-- [ ] **zoro/utils/preprocessing.py:16** - Add ImageNet default normalization values
-- [ ] **zoro/utils/preprocessing.py:17** - Support per-channel normalization
-- [ ] **zoro/utils/preprocessing.py:22** - Implement random crop augmentation
-- [ ] **zoro/utils/preprocessing.py:23** - Add color jitter augmentation
-- [ ] **zoro/utils/preprocessing.py:24** - Implement CutOut and MixUp augmentations
-- [ ] **zoro/utils/preprocessing.py:25** - Add geometric transformations (rotation, flip, scale)
-- [ ] **zoro/utils/preprocessing.py:30** - Support loading from URL
-- [ ] **zoro/utils/preprocessing.py:31** - Add EXIF orientation handling
-- [ ] **zoro/utils/preprocessing.py:32** - Implement lazy loading for large datasets
-- [ ] **zoro/utils/preprocessing.py:39** - Implement efficient data loading with prefetching
-- [ ] **zoro/utils/preprocessing.py:40** - Add support for distributed data loading
-- [ ] **zoro/utils/preprocessing.py:41** - Implement caching mechanism for frequently accessed images
-- [ ] **zoro/utils/preprocessing.py:46** - Implement iterator with proper batching
-- [ ] **zoro/utils/preprocessing.py:50** - Return dataset length
+### 🔧 Complete FIXME List
+
+- [ ] **zoro/core/optimizer.py:12** - Add support for learning rate scheduling
+- [ ] **zoro/core/optimizer.py:13** - Implement warm-up period for training stability
+- [ ] **zoro/core/optimizer.py:14** - Add gradient clipping functionality
+- [ ] **zoro/core/optimizer.py:17** - Implement momentum-based updates
+- [ ] **zoro/core/optimizer.py:18** - Add support for sparse gradients
+- [ ] **zoro/core/optimizer.py:22** - Optimize memory cleanup for large models
+- [ ] **zoro/core/optimizer.py:29** - Validate parameter types and shapes
+- [ ] **zoro/core/optimizer.py:30** - Add automatic dtype conversion
+- [ ] **zoro/core/optimizer.py:35** - Handle NaN gradients gracefully
+- [ ] **zoro/core/optimizer.py:36** - Add gradient scaling for mixed precision
+- [ ] **zoro/core/scheduler.py:10** - Add support for warm restarts
+- [ ] **zoro/core/scheduler.py:11** - Implement cycle multiplier for longer training
+- [ ] **zoro/core/scheduler.py:17** - Handle edge case when epoch > T_max
+- [ ] **zoro/core/scheduler.py:18** - Add logging for learning rate changes
+- [ ] **zoro/core/scheduler.py:25** - Validate warmup_steps is positive
+- [ ] **zoro/core/scheduler.py:30** - Implement smooth transition at end of warmup
+- [ ] **zoro/models/transformer.py:14** - Add support for relative positional encoding
+- [ ] **zoro/models/transformer.py:15** - Implement flash attention for memory efficiency
+- [ ] **zoro/models/transformer.py:16** - Add model parallelism support for large models
+- [ ] **zoro/models/transformer.py:20** - Handle variable sequence lengths efficiently
+- [ ] **zoro/models/transformer.py:21** - Add caching for inference mode
+- [ ] **zoro/models/transformer.py:22** - Implement gradient checkpointing option
+- [ ] **zoro/models/transformer.py:26** - Implement beam search decoding
+- [ ] **zoro/models/transformer.py:27** - Add temperature and top-k sampling
+- [ ] **zoro/models/transformer.py:28** - Support batched generation
+- [ ] **zoro/models/transformer.py:35** - Add support for ALiBi positional bias
+- [ ] **zoro/models/transformer.py:36** - Implement grouped query attention
+- [ ] **zoro/models/transformer.py:40** - Add KV cache for autoregressive generation
+- [ ] **zoro/models/transformer.py:41** - Optimize memory layout for better performance
+- [ ] **zoro/models/encoder.py:12** - Add layer normalization options
+- [ ] **zoro/models/encoder.py:13** - Support residual connections
+- [ ] **zoro/models/encoder.py:21** - Add dropout for regularization
+- [ ] **zoro/models/encoder.py:22** - Implement attention pooling option
+- [ ] **zoro/models/encoder.py:30** - Support multiple backbone architectures
+- [ ] **zoro/models/encoder.py:31** - Add pretrained weight loading
+- [ ] **zoro/models/encoder.py:32** - Implement feature pyramid network option
+- [ ] **zoro/models/encoder.py:36** - Handle different image sizes
+- [ ] **zoro/models/encoder.py:37** - Add data augmentation pipeline
+- [ ] **zoro/data/loader.py:12** - Add lazy loading for large datasets
+- [ ] **zoro/data/loader.py:13** - Implement memory mapping for efficiency
+- [ ] **zoro/data/loader.py:14** - Add data validation on load
+- [ ] **zoro/data/loader.py:19** - Add caching mechanism
+- [ ] **zoro/data/loader.py:20** - Handle corrupted data gracefully
+- [ ] **zoro/data/loader.py:24** - Implement efficient length calculation
+- [ ] **zoro/data/loader.py:28** - Add automatic batch size scaling
+- [ ] **zoro/data/loader.py:29** - Implement distributed sampling
+- [ ] **zoro/data/loader.py:30** - Add prefetching optimization
+- [ ] **zoro/data/preprocessing.py:11** - Add support for multiple tokenizers
+- [ ] **zoro/data/preprocessing.py:12** - Implement dynamic padding
+- [ ] **zoro/data/preprocessing.py:17** - Add text cleaning and normalization
+- [ ] **zoro/data/preprocessing.py:18** - Handle special characters properly
+- [ ] **zoro/data/preprocessing.py:19** - Implement truncation strategies
+- [ ] **zoro/data/preprocessing.py:26** - Add aspect ratio preservation option
+- [ ] **zoro/data/preprocessing.py:27** - Implement center crop vs resize options
+- [ ] **zoro/data/preprocessing.py:31** - Support different normalization schemes
+- [ ] **zoro/data/preprocessing.py:32** - Add per-channel normalization
+- [ ] **zoro/utils/metrics.py:7** - Add support for multi-label classification
+- [ ] **zoro/utils/metrics.py:8** - Implement weighted accuracy
+- [ ] **zoro/utils/metrics.py:13** - Add micro/macro averaging options
+- [ ] **zoro/utils/metrics.py:14** - Handle edge case of no positive predictions
+- [ ] **zoro/utils/metrics.py:15** - Support multi-class scenarios
+- [ ] **zoro/utils/metrics.py:22** - Add support for custom metrics
+- [ ] **zoro/utils/metrics.py:23** - Implement metric history storage
+- [ ] **zoro/utils/metrics.py:27** - Add running average computation
+- [ ] **zoro/utils/metrics.py:28** - Implement metric smoothing
+- [ ] **zoro/utils/metrics.py:34** - Handle empty metric lists
+- [ ] **zoro/utils/checkpoint.py:12** - Add cloud storage support (S3, GCS)
+- [ ] **zoro/utils/checkpoint.py:13** - Implement checkpoint compression
+- [ ] **zoro/utils/checkpoint.py:18** - Add atomic save for crash safety
+- [ ] **zoro/utils/checkpoint.py:19** - Save training state for exact resume
+- [ ] **zoro/utils/checkpoint.py:20** - Implement best model tracking
+- [ ] **zoro/utils/checkpoint.py:24** - Handle missing keys gracefully
+- [ ] **zoro/utils/checkpoint.py:25** - Add version compatibility checks
+- [ ] **zoro/utils/checkpoint.py:26** - Support loading from URLs
+- [ ] **zoro/utils/checkpoint.py:30** - Implement async cleanup
+- [ ] **zoro/utils/checkpoint.py:31** - Add disk space monitoring
+- [ ] **zoro/training/trainer.py:12** - Add mixed precision training support
+- [ ] **zoro/training/trainer.py:13** - Implement gradient accumulation
+- [ ] **zoro/training/trainer.py:14** - Add distributed training hooks
+- [ ] **zoro/training/trainer.py:21** - Add early stopping mechanism
+- [ ] **zoro/training/trainer.py:22** - Implement curriculum learning
+- [ ] **zoro/training/trainer.py:23** - Add logging callbacks
+- [ ] **zoro/training/trainer.py:26** - Handle batch size mismatches
+- [ ] **zoro/training/trainer.py:30** - Add evaluation metrics selection
+- [ ] **zoro/training/trainer.py:31** - Implement inference optimization
+- [ ] **zoro/training/trainer.py:32** - Support streaming evaluation
+- [ ] **zoro/training/trainer.py:41** - Initialize process groups properly
+- [ ] **zoro/training/trainer.py:42** - Add communication backend selection
+- [ ] **zoro/training/trainer.py:46** - Implement efficient all-reduce
+- [ ] **zoro/training/trainer.py:47** - Add gradient compression
+- [ ] **zoro/training/losses.py:12** - Add hard negative mining
+- [ ] **zoro/training/losses.py:13** - Implement label smoothing
+- [ ] **zoro/training/losses.py:17** - Handle batch size = 1 edge case
+- [ ] **zoro/training/losses.py:18** - Add support for asymmetric loss
+- [ ] **zoro/training/losses.py:19** - Implement memory bank for negatives
+- [ ] **zoro/training/losses.py:27** - Add semi-hard negative mining
+- [ ] **zoro/training/losses.py:28** - Support online triplet selection
+- [ ] **zoro/training/losses.py:32** - Add distance function options
+- [ ] **zoro/training/losses.py:33** - Implement soft margin variant
+- [ ] **zoro/training/losses.py:38** - Handle class imbalance automatically
+- [ ] **zoro/training/losses.py:39** - Add label smoothing option
+- [ ] **zoro/training/losses.py:40** - Support ignore index
+
 ## 🤝 Contributing
 
-1. Pick a TODO item from the list above
-2. Implement the functionality
+1. Pick a FIXME item from the list above
+2. Implement the fix
 3. Test your implementation
-4. Update this README when TODOs are completed
+4. Update this README when FIXMEs are resolved
