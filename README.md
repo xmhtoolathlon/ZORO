@@ -48,6 +48,10 @@ ZORO/
 - **Segmentation**: Instance segmentation pipeline
 - **Training**: Distributed training setup
 
+### 🐛 Known Issues List
+
+_All known issues have been resolved._
+
 ### 📝 Complete TODO List
 
 - [ ] **zoro/__init__.py:8** - Add lazy imports for heavy modules
