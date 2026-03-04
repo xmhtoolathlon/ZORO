@@ -4,14 +4,14 @@
 
 ## About This Changelog
 
-This document tracks all FIXME items that have been addressed in the codebase. Items are extracted from code comments and organized by file location.
+This document automatically tracks all FIXME items that have been addressed in the codebase. Items are extracted from code comments and organized by file location.
 
 ## 📊 Statistics
 
 - **Total FIXME items**: 0
 - **Last updated**: 2026-03-04
 
-## 🔧 FIXME Tracking
+## 🔧 Pending Fixes
 
 ### 📝 Complete FIXME List
 
