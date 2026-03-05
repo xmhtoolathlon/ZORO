@@ -157,6 +157,81 @@ ZORO/
 - [ ] **zoro/utils/metrics.py:28** - Add running average computation
 - [ ] **zoro/utils/metrics.py:29** - Implement metric smoothing
 - [ ] **zoro/utils/metrics.py:35** - Handle empty metric lists
+### 📚 Function Documentation Status
+
+The following functions are missing proper docstrings:
+
+- [ ] **zoro/core/detector.py:__init__** - Missing docstring
+- [ ] **zoro/core/detector.py:visualize** - Missing docstring
+- [ ] **zoro/core/detector.py:__init__** - Missing docstring
+- [ ] **zoro/core/detector.py:export_model** - Missing docstring
+- [ ] **zoro/core/detector.py:__init__** - Missing docstring
+- [ ] **zoro/core/detector.py:propose_regions** - Missing docstring
+- [ ] **zoro/core/optimizer.py:__init__** - Missing docstring
+- [ ] **zoro/core/optimizer.py:step** - Missing docstring
+- [ ] **zoro/core/optimizer.py:zero_grad** - Missing docstring
+- [ ] **zoro/core/optimizer.py:__init__** - Missing docstring
+- [ ] **zoro/core/optimizer.py:compute_update** - Missing docstring
+- [ ] **zoro/core/scheduler.py:__init__** - Missing docstring
+- [ ] **zoro/core/scheduler.py:step** - Missing docstring
+- [ ] **zoro/core/scheduler.py:__init__** - Missing docstring
+- [ ] **zoro/core/scheduler.py:get_lr** - Missing docstring
+- [ ] **zoro/core/segmentation.py:get_mask** - Missing docstring
+- [ ] **zoro/core/segmentation.py:__init__** - Missing docstring
+- [ ] **zoro/core/segmentation.py:predict** - Missing docstring
+- [ ] **zoro/core/segmentation.py:refine_masks** - Missing docstring
+- [ ] **zoro/core/segmentation.py:__init__** - Missing docstring
+- [ ] **zoro/core/segmentation.py:segment** - Missing docstring
+- [ ] **zoro/data/loader.py:__init__** - Missing docstring
+- [ ] **zoro/data/loader.py:__getitem__** - Missing docstring
+- [ ] **zoro/data/loader.py:__len__** - Missing docstring
+- [ ] **zoro/data/loader.py:create_dataloader** - Missing docstring
+- [ ] **zoro/data/preprocessing.py:__init__** - Missing docstring
+- [ ] **zoro/data/preprocessing.py:process** - Missing docstring
+- [ ] **zoro/data/preprocessing.py:__init__** - Missing docstring
+- [ ] **zoro/data/preprocessing.py:normalize** - Missing docstring
+- [ ] **zoro/evaluation/metrics.py:__init__** - Missing docstring
+- [ ] **zoro/evaluation/metrics.py:update** - Missing docstring
+- [ ] **zoro/evaluation/metrics.py:get_summary** - Missing docstring
+- [ ] **zoro/evaluation/metrics.py:export_report** - Missing docstring
+- [ ] **zoro/models/backbone.py:__init__** - Missing docstring
+- [ ] **zoro/models/backbone.py:forward** - Missing docstring
+- [ ] **zoro/models/backbone.py:__init__** - Missing docstring
+- [ ] **zoro/models/backbone.py:forward** - Missing docstring
+- [ ] **zoro/models/backbone.py:__init__** - Missing docstring
+- [ ] **zoro/models/backbone.py:forward** - Missing docstring
+- [ ] **zoro/models/encoder.py:__init__** - Missing docstring
+- [ ] **zoro/models/encoder.py:forward** - Missing docstring
+- [ ] **zoro/models/encoder.py:__init__** - Missing docstring
+- [ ] **zoro/models/encoder.py:extract_features** - Missing docstring
+- [ ] **zoro/models/transformer.py:__init__** - Missing docstring
+- [ ] **zoro/models/transformer.py:forward** - Missing docstring
+- [ ] **zoro/models/transformer.py:generate** - Missing docstring
+- [ ] **zoro/models/transformer.py:__init__** - Missing docstring
+- [ ] **zoro/models/transformer.py:forward** - Missing docstring
+- [ ] **zoro/training/losses.py:__init__** - Missing docstring
+- [ ] **zoro/training/losses.py:forward** - Missing docstring
+- [ ] **zoro/training/losses.py:__init__** - Missing docstring
+- [ ] **zoro/training/losses.py:forward** - Missing docstring
+- [ ] **zoro/training/losses.py:focal_loss** - Missing docstring
+- [ ] **zoro/training/trainer.py:__init__** - Missing docstring
+- [ ] **zoro/training/trainer.py:train_epoch** - Missing docstring
+- [ ] **zoro/training/trainer.py:evaluate** - Missing docstring
+- [ ] **zoro/training/trainer.py:__init__** - Missing docstring
+- [ ] **zoro/training/trainer.py:sync_gradients** - Missing docstring
+- [ ] **zoro/utils/checkpoint.py:__init__** - Missing docstring
+- [ ] **zoro/utils/checkpoint.py:save** - Missing docstring
+- [ ] **zoro/utils/checkpoint.py:load** - Missing docstring
+- [ ] **zoro/utils/checkpoint.py:cleanup_old** - Missing docstring
+- [ ] **zoro/utils/metrics.py:accuracy** - Missing docstring
+- [ ] **zoro/utils/metrics.py:precision_recall_f1** - Missing docstring
+- [ ] **zoro/utils/metrics.py:__init__** - Missing docstring
+- [ ] **zoro/utils/metrics.py:update** - Missing docstring
+- [ ] **zoro/utils/metrics.py:get_average** - Missing docstring
+- [ ] **zoro/utils/preprocessing.py:__init__** - Missing docstring
+- [ ] **zoro/utils/preprocessing.py:__iter__** - Missing docstring
+- [ ] **zoro/utils/preprocessing.py:__len__** - Missing docstring
+
 ## 🤝 Contributing
 
 1. Pick a FIXME item from the list above
