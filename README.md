@@ -53,7 +53,7 @@ ZORO/
 - **Data Loading**: Lazy loading and memory efficiency
 - **Training**: Distributed training and mixed precision support
 
-### 📋 Complete FIXME List
+### 🔧 Complete FIXME List
 
 - [ ] **zoro/core/optimizer.py:11** - Add support for learning rate scheduling
 - [ ] **zoro/core/optimizer.py:12** - Implement warm-up period for training stability
